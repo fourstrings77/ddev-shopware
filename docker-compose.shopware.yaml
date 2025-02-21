@@ -1,16 +1,12 @@
-#ddev-generated
-# Simple template to demonstrate addon-template
 services:
-  addon-template:
-    container_name: ddev-${DDEV_SITENAME}-addon-template
-    image: busybox:stable
-    command: tail -f /dev/null
-    restart: "no"
-    # These labels ensure this service is discoverable by ddev.
-    labels:
-      com.ddev.site-name: ${DDEV_SITENAME}
-      com.ddev.approot: $DDEV_APPROOT
-
-    volumes:
-    - ".:/mnt/ddev_config"
-    - "ddev-global-cache:/mnt/ddev-global-cache"
+    web:
+        expose:
+            - 9997
+            - 9998
+            - 9999
+        environment:
+            - HOST=0.0.0.0
+            - PORT=9997
+            - APP_URL=${DDEV_SITENAME}
+            - HTTP_EXPOSE=${DDEV_ROUTER_HTTP_PORT}:80,${DDEV_MAILHOG_PORT}:8025,9999:9999,9998:9998,9997:9997
+            - HTTPS_EXPOSE=${DDEV_ROUTER_HTTPS_PORT}:80,${DDEV_MAILHOG_HTTPS_PORT}:8025,8899:9999,8888:9998,8887:9997
