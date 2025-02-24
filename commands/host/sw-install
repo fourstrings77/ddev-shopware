@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+ddev exec bin/console system:install \
+    --app-env="dev" \
+    --app-url="http://${DDEV_SITENAME}.ddev.site" \
+    --database-url="mysql://db:db@db:3306/shopware" \
+    --database-ssl-dont-verify-cert="1" \
+    --blue-green="1" \
+    --mailer-url="smtp://localhost:1025?encryption=&auth_mode=" \
+
+ddev exec bin/console system:install --create-database --basic-setup
