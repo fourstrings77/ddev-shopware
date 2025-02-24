@@ -37,7 +37,7 @@ Build or watch Storefront:
 ddev build-storefront
 ddev watch-storefront
 ```
-Watched Storefront will be available under: https://your_project.ddev.site:9998
+Watched Storefront will be available under: http://your_project.ddev.site:9998
 
 
 Build or watch Admin
@@ -45,4 +45,4 @@ Build or watch Admin
 ddev build-admin
 ddev watch-admin
 ```
-Watched Admin will be available under: https://your_project.ddev.site:9997
+Watched Admin will be available under: http://your_project.ddev.site:9997
