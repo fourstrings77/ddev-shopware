@@ -61,7 +61,12 @@ pre_install_actions:
 project_files:
   - docker-compose.shopware.yaml
   # - commands/web/add-on-command
-  # - commands/host/add-on-command-host
+  - commands/host/sw
+  - commands/host/watch-admin
+  - commands/host/watch-storefront
+  - commands/host/build-admin
+  - commands/host/build-storefront
+
   # - web-build/Dockerfile.addon-template
   # - some-directory/file1.txt
   # - some-directory/file2.txt
