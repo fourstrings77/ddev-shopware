@@ -1,1 +1,3 @@
+!#/bin/bash
+
 ddev exec bin/console $1

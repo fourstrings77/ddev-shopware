@@ -1,0 +1,2 @@
+!#/bin/bash
+ddev exec bin/watch-storefront.sh
