@@ -1,2 +1,2 @@
-!#/bin/bash
+#!/usr/bin/env bash
 ddev exec bin/watch-administration.sh
